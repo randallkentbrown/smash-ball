@@ -14,14 +14,17 @@ import javafx.scene.layout.Pane;
 public class ViewConfig {
 
     // STATE //
+    private static final String defaultTitle = "Smashball";
+    private static final TwoInt defaultResolution = new TwoInt(Main.defaultResX, Main.defaultResY);
+
     private String _title;
     private Parent _root;
     private TwoInt _resolution;
 
     // CONSTRUCTOR //
     public ViewConfig() {
-        setTitle("Smashball");
-        setResolution(new TwoInt(Main.defaultResX, Main.defaultResY));
+        setTitle(defaultTitle);
+        setResolution(defaultResolution);
         setRoot(new Pane());
     }
     public ViewConfig (String title, TwoInt resolution, Parent root) {

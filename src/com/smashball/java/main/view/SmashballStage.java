@@ -4,7 +4,6 @@
 package com.smashball.java.main.view;
 
 /* imports */
-import com.smashball.java.main.util.Two.TwoInt;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
