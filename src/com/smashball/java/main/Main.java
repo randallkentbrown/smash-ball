@@ -1,10 +1,9 @@
 package com.smashball.java.main;
 
-import com.smashball.java.main.util.Two.TwoInt;
+import com.smashball.java.main.model.geom.PointInt;
 import com.smashball.java.main.view.SmashballStage;
 import com.smashball.java.main.view.ViewConfig;
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -23,7 +22,7 @@ public class Main extends Application {
         // Define ViewConfig parameters. //
         String title = "Smashball";
         Pane rootPane = new Pane();
-        TwoInt resolution = new TwoInt(defaultResX, defaultResY);
+        PointInt resolution = new PointInt(defaultResX, defaultResY);
 
         // Initialize ViewConfig. //
         ViewConfig config = new ViewConfig(

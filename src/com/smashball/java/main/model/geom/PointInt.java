@@ -1,19 +1,19 @@
 /* created by Kent Brown on 2/5/2018 */
 
 /* package */
-package com.smashball.java.main.util.Two;
+package com.smashball.java.main.model.geom;
 
 /* imports */
 
 /* implementation */
-public class TwoInt {
+public class PointInt {
 
     // STATE //
     private int _t1;
     private int _t2;
 
     // CONSTRUCTOR //
-    public TwoInt(int int1, int int2) {
+    public PointInt(int int1, int int2) {
         _t1 = int1;
         _t2 = int2;
     }
