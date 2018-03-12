@@ -39,6 +39,8 @@ public class SmashballStage extends Stage {
         // Create the main scene. //
         Scene primaryScene = new Scene(cfg.getRoot(), cfg.getResolutionX(), cfg.getResolutionY());
         setScene(primaryScene);
+
+        // 
     }
 
 }

@@ -7,9 +7,10 @@ package com.smashball.java.main.view.pane;
 import javafx.scene.layout.Pane;
 
 /* implementation */
-public class SmashballPane extends Pane {
+class SmashballPane extends Pane {
 
     // STATE //
+    public static final String RESOURCES_URL = "../../../../../../resources/";
 
     // CONSTRUCTOR //
 
