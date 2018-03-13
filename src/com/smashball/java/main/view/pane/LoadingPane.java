@@ -5,46 +5,60 @@ package com.smashball.java.main.view.pane;
 
 /* imports */
 import javafx.scene.Node;
-import javafx.scene.image.Image;
+import com.smashball.java.main.controller.resources.ResourceManager;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
 
 /* implementation */
 // Uses the singleton pattern. //
 public class LoadingPane extends SmashballPane {
 
     // STATE //
-    private static final String TITLE_URL = SmashballPane.getResourceURL() + "title.png";
+    // static keys //
+    public static String KEY_TITLE = "ttl";
+
+    // singleton instance //
     private static LoadingPane _instance;
 
+    // nonstatic //
+    private ImageView background;
+
+
     // CONSTRUCTOR //
+    private LoadingPane() {
+        background = null;
+    }
 
     // GETTERS & SETTERS //
     public static LoadingPane getInstance() {
         if (_instance == null) {
             _instance = new LoadingPane();
-            _instance.load();
         }
         return _instance;
     }
 
     // BEHAVIOUR //
     @Override
-    void load() {
-        // Get the background image from resources. //
-        Image background = new Image(TITLE_URL);
+    public void load(ResourceManager manager) {
+        if (!isLoaded()) {
+            ImageView bckg = manager.getImageView(KEY_TITLE);
+            setBackground(bckg);
+        }
+    }
 
-        // Create a new image view with that image. //
-        ImageView imgView = new ImageView(background);
+    private void setBackground(ImageView imgView) {
+        removeChild(background);
+        background = imgView;
+        addChild(background);
 
-        // Add that image to the pane. //
-        addChild(imgView);
     }
 
     // Add Node e to the children list. //
     private void addChild(Node e) {
         getChildren().add(e);
+    }
+
+    private void removeChild(Node e) {
+        getChildren().remove(e);
     }
 
 }

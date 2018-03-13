@@ -4,30 +4,30 @@
 package com.smashball.java.main.view.pane;
 
 /* imports */
+import com.smashball.java.main.controller.resources.ResourceManager;
 import javafx.scene.layout.Pane;
 
 /* implementation */
-class SmashballPane extends Pane {
+public class SmashballPane extends Pane {
 
     // STATE //
-    private static String PROTOCOL = "file:\\\\\\";
-    private static String RESOURCES_URL = "\\src\\resources\\";
+    private boolean _loaded;
 
     // CONSTRUCTOR //
-    protected SmashballPane() {
-
+    SmashballPane() {
+        _loaded = false;
     }
 
     // GETTERS & SETTERS //
-    protected static final String getResourceURL() {
-        String wd = System.getProperty("user.dir");
-        return PROTOCOL + wd + RESOURCES_URL;
-    }
 
     // BEHAVIOUR //
-    void load() {
+    public void load(ResourceManager rm) {
         // Default load method, shared by all subclasses. //
+        _loaded = true;
+    }
 
+    public boolean isLoaded() {
+        return _loaded;
     }
 
 }

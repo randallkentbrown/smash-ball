@@ -4,13 +4,16 @@
 package com.smashball.java.main.view;
 
 /* imports */
+import com.smashball.java.main.controller.resources.ResourceManager;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.smashball.java.main.view.pane.*;
 
 /* implementation */
 public class SmashballStage extends Stage {
 
     // STATE //
+    private SmashballPane currentPane;
 
     // CONSTRUCTOR //
     public SmashballStage(ViewConfig cfg) {
@@ -36,9 +39,18 @@ public class SmashballStage extends Stage {
         setWidth(cfg.getResolutionX());
         setHeight(cfg.getResolutionY());
 
+        currentPane = cfg.getRoot();
+
         // Create the main scene. //
         Scene primaryScene = new Scene(cfg.getRoot(), cfg.getResolutionX(), cfg.getResolutionY());
         setScene(primaryScene);
+    }
+
+    public void runPane(ResourceManager rm) {
+        if (!(currentPane.isLoaded())) {
+            currentPane.load(rm);
+        }
+        show();
     }
 
 }

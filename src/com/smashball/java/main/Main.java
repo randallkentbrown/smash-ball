@@ -1,9 +1,11 @@
 package com.smashball.java.main;
 
+import com.smashball.java.main.controller.resources.ResourceManager;
 import com.smashball.java.main.model.geom.PointInt;
 import com.smashball.java.main.view.SmashballStage;
 import com.smashball.java.main.view.ViewConfig;
 import com.smashball.java.main.view.pane.LoadingPane;
+import com.smashball.java.main.view.pane.SmashballPane;
 import javafx.application.Application;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -14,15 +16,20 @@ public class Main extends Application {
     public static final int defaultResX = 800;
     public static final int defaultResY = 600;
 
-
     // STATE. //
     private SmashballStage stage;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
+        // Initialize ResourceManager //
+        ResourceManager resourceManager = new ResourceManager();
+        resourceManager.loadData();                                     // NOTE: WILL BE DEPRECATED
+
         // Define ViewConfig parameters. //
         String title = "Smashball";
-        Pane rootPane = LoadingPane.getInstance();
+        SmashballPane rootPane = LoadingPane.getInstance();
+        rootPane.load(resourceManager);
         PointInt resolution = new PointInt(defaultResX, defaultResY);
 
         // Initialize ViewConfig. //
@@ -36,10 +43,10 @@ public class Main extends Application {
         stage = new SmashballStage(config);
 
         // Display the stage. //
-        stage.show();
+        stage.runPane(resourceManager);
     }
 
-
+    // Start the application. //
     public static void main(String[] args) {
         launch(args);
     }
