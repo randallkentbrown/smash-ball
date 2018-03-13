@@ -10,7 +10,7 @@ import javafx.application.Application;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class SmashballApplication extends Application {
 
     // GLOBAL CONSTANTS. //
     public static final int defaultResX = 800;

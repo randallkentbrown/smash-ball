@@ -5,18 +5,16 @@ package com.smashball.java.main.view;
 
 /* imports */
 
-import com.smashball.java.main.Main;
+import com.smashball.java.main.SmashballApplication;
 import com.smashball.java.main.model.geom.PointInt;
 import com.smashball.java.main.view.pane.SmashballPane;
-import javafx.scene.Parent;
-import javafx.scene.layout.Pane;
 
 /* implementation */
 public class ViewConfig {
 
     // STATE //
     private static final String defaultTitle = "Smashball";
-    private static final PointInt defaultResolution = new PointInt(Main.defaultResX, Main.defaultResY);
+    private static final PointInt defaultResolution = new PointInt(SmashballApplication.defaultResX, SmashballApplication.defaultResY);
 
     private String _title;
     private SmashballPane _root;
