@@ -17,7 +17,7 @@ public class ResourceManager
     // State //
     private static final String PROTOCOL = "file:\\\\\\";
     private static final String RESOURCES_URL = "\\src\\resources\\";
-    private static final String TITLE_URL = getResourceURL() + "title.png";
+    private static final String TITLE_URL = getResourceURL() + "\\title\\background.png";
 
     private ResourceLoader resourceLoader;
     private HashMap<String, Image> imageMap;

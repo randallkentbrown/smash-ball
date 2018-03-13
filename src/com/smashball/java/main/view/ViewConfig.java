@@ -29,8 +29,8 @@ public class ViewConfig {
         setRoot(null);
     }
     public ViewConfig (String title, PointInt resolution, SmashballPane root) {
-        _title = title;
-        _root = root;
+        _title      = title;
+        _root       = root;
         _resolution = resolution;
     }
 
