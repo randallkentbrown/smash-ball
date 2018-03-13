@@ -10,11 +10,19 @@ import javafx.scene.layout.Pane;
 class SmashballPane extends Pane {
 
     // STATE //
-    public static final String RESOURCES_URL = "../../../../../../resources/";
+    private static String PROTOCOL = "file:\\\\\\";
+    private static String RESOURCES_URL = "\\src\\resources\\";
 
     // CONSTRUCTOR //
+    protected SmashballPane() {
+
+    }
 
     // GETTERS & SETTERS //
+    protected static final String getResourceURL() {
+        String wd = System.getProperty("user.dir");
+        return PROTOCOL + wd + RESOURCES_URL;
+    }
 
     // BEHAVIOUR //
     void load() {

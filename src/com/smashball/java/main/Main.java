@@ -3,6 +3,7 @@ package com.smashball.java.main;
 import com.smashball.java.main.model.geom.PointInt;
 import com.smashball.java.main.view.SmashballStage;
 import com.smashball.java.main.view.ViewConfig;
+import com.smashball.java.main.view.pane.LoadingPane;
 import javafx.application.Application;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -21,7 +22,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         // Define ViewConfig parameters. //
         String title = "Smashball";
-        Pane rootPane = new Pane();
+        Pane rootPane = LoadingPane.getInstance();
         PointInt resolution = new PointInt(defaultResX, defaultResY);
 
         // Initialize ViewConfig. //
