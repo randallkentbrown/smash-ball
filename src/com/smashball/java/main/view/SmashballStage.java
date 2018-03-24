@@ -45,6 +45,10 @@ public class SmashballStage extends Stage {
         setScene(primaryScene);
     }
 
+    void setPane(SmashballPane newPane) {
+        getScene().setRoot(newPane);
+    }
+
     public void runPane(ResourceManager rm) {
         if (!(currentPane.isLoaded())) {
             currentPane.load(rm);
