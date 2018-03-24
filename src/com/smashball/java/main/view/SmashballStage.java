@@ -7,7 +7,6 @@ package com.smashball.java.main.view;
 import com.smashball.java.main.controller.resources.ResourceManager;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import com.smashball.java.main.view.pane.*;
 
 /* implementation */
 public class SmashballStage extends Stage {
@@ -16,7 +15,7 @@ public class SmashballStage extends Stage {
     private SmashballPane currentPane;
 
     // CONSTRUCTOR //
-    public SmashballStage(ViewConfig cfg) {
+    public SmashballStage(ViewConfig cfg)  {
         // Call super-constructor. //
         super();
 

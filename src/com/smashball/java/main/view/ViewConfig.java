@@ -7,7 +7,6 @@ package com.smashball.java.main.view;
 
 import com.smashball.java.main.SmashballApplication;
 import com.smashball.java.main.model.geom.PointInt;
-import com.smashball.java.main.view.pane.SmashballPane;
 
 /* implementation */
 public class ViewConfig {

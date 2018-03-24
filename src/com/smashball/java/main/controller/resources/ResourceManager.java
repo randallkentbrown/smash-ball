@@ -5,7 +5,7 @@ package com.smashball.java.main.controller.resources;
 
 /* Imports */
 
-import com.smashball.java.main.view.pane.LoadingPane;
+import com.smashball.java.main.view.LoadingPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 

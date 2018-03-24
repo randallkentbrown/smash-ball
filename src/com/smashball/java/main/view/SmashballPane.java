@@ -1,7 +1,7 @@
 /* created by Kent Brown on 2/6/2018 */
 
 /* package */
-package com.smashball.java.main.view.pane;
+package com.smashball.java.main.view;
 
 /* imports */
 import com.smashball.java.main.controller.resources.ResourceManager;
